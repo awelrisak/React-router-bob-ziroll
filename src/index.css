@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif !important;
+    caret-color: red !important;
+      
+}
+
+*:focus{
+  outline: 2px solid black;
+}
+
+html,
+body {
+    background-color:    #FFF7ED;
+    font-family: "Inter", sans-serif;
+}
+
+*::selection {
+  background-color: red;
+  
+}
+
+.unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version */
+}
+
+/* Default color style */
+progress {
+  /* Define other necessary styles */
+  height: 5px;
+  flex-grow: 1;
+  background-color: red;
+  margin: 0 8px;
+}
+
+
+/* Green color style */
+progress[value]::-webkit-progress-value {
+  background-color: orange;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: lightgrey;
+}
+progress[value]::-moz-progress-bar {
+  background-color: lightgrey;
+}
+
+
+
+
+
+
+a {
+    text-decoration: unset;
+    color: unset;
+}
+
+ul{
+    list-style-type: none !important;
+    padding: 0;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 0 12px;
+    margin: 0;
+}

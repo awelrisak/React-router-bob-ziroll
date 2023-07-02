@@ -1,20 +1,31 @@
-
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
+import React, { useEffect } from "react"
+
+import { Link } from "react-router-dom"
 
 const About = () => {
+  useEffect(() =>{
+    
+    document.title = "about"
+  }, [])
+  
   return (
     <>
+    
      <img 
       src="https://source.unsplash.com/seX13AzLqls"  
       width="100%" 
+      height="300px"
       alt="image"
       style={{
-        marginBottom: "2rem"
+        aspectRatio: "1/1",
+        
       }}
       />
+      
     
     <Typography
     variant="h5"
@@ -46,7 +57,7 @@ const About = () => {
       </Typography>
       
      <Box
-      bgcolor="rgba(255, 165, 0, 0.8)"
+      bgcolor="primary.dark"
       p={2}
       borderRadius={1}
       sx={{
@@ -65,23 +76,13 @@ const About = () => {
         Your van is ready.
       </Typography>
       <Button 
+       component={ Link }
+       to="/vans"
         variant="contained" 
         color="secondary">
         Explore Our Vans
       </Button>
     </Box>
-    
-    <Typography 
-       variant="body2" 
-       component="footer" 
-       color="grey"
-       sx={{
-         textAlign: "center",
-         p: 2,
-         backgroundColor: "black"
-         }}>
-        © 2022 VANLIFE
-      </Typography>
     </>
   )
 }

@@ -1,45 +1,32 @@
 import { createTheme } from '@mui/material/styles';
-import { grey } from '@mui/material/colors';
+import { deepOrange } from '@mui/material/colors';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: grey[50], // white
-    },
-    secondary: {
-      main: "#000000", // black
-    },
-    text: {
-      primary: "#000000", // black
-      secondary: "#FFFFFF", // white
-    },
-    
-  },
-});
-
-/*const theme = createTheme({
-  palette: {
-    primary: {
-      light: '#757ce8',
-      main: '#FFF',
-      dark: '#002884',
+      light: '#fcd39f60',
+      main: '#fff7ed',
+      dark: '#fcd39f',
       contrastText: '#fff',
     },
-    secondary: {
-      light: '#ff7961',
-      main: '#000000',
-      dark: '#ba000d',
-      contrastText: '#000',
+    secondary: {      
+      main: deepOrange[400],      
+      contrastText: '#FFF',
     },
     text: {
-      light: "#FFf",
-      dark: "#000",
+      light: "#000000",
+      dark: "#000000",
       primary: "#000000", // black
       secondary: "#FFFFFF", // white
       contrastText: '#000',
     },
   },
-});*/
+  typography: {
+   fontFamily: 'Inter, Roboto, Arial, sans-serif'
+  }
+});
+
+
 
 
 export default theme;

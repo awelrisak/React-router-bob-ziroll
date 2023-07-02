@@ -1,14 +1,17 @@
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import React, { useEffect } from "react"
 
 import Box from '@mui/material/Box';
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
+import { Link } from "react-router-dom"
 
 const Home = () => {
+  
+  useEffect(() =>{
+    document.title = "VanLife"
+  }, [])
+  
   return (
    <Box
       sx={{
@@ -16,7 +19,7 @@ const Home = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-around",
-        height: "545px",
+        height: "80vh",
         
       backgroundImage: "url('https://source.unsplash.com/JgOeRuGD_Y4')",
         backgroundBlendMode: "multiply",
@@ -33,8 +36,10 @@ const Home = () => {
         <Typography 
           color="text.secondary"
           variant="h4" 
-          component="div" 
-          sx={{ mb: "0.7rem" }}
+          component="h3" 
+          sx={{ 
+             mb: "0.7rem" 
+             }}
           >
           You got the travel plans, we got the travel vans.
         </Typography>
@@ -45,25 +50,15 @@ const Home = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tristique lacus in augue vest
         </Typography>
       </Box>
-      
-      
+            
       <Button 
+        component={ Link }
+        to="/vans"
         variant="contained" 
         color="warning" fullWidth>
         Find Your Van
       </Button>
-      
-      <Typography 
-        componenent="small"
-        color="lightgrey"
-        variant="body2" 
-        sx={{ 
-         alignSelf: "center"
-         }}>
-        © 2023 vanLife
-      </Typography>
-     
-      
+           
     </Box>
   )
 }
